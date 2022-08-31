@@ -1,0 +1,46 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+.sidebar
+    display: block
+    padding: 20px
+    max-width: 250px
+    border-right: 1px solid 
+    height: 100vh
+.folder
+    position: relative
+    font-size: 12px
+    &__subfolder,
+    &__file
+        margin-left: -10px
+        padding-left: 26px
+        position: relative
+        cursor: pointer
+        &::after
+            content: ""
+            position: absolute
+            left: 17px
+            top: -8px
+            width: 10px
+            height: 100%
+            border-bottom: 1px dotted
+            border-left: 1px dotted
+            z-index: -1
+    &__file
+        &::before
+            content: url(../icons/file.png)
+            vertical-align: middle    
+            margin-right: 5px 
+    &__subfolder
+        &-name
+            margin-left: 5px
+        &::before
+            content: url(../icons/folder.png)
+            vertical-align: middle
+        &-nested
+            display: none
+            &_active
+                display: block
+

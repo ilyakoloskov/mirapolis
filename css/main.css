@@ -1,0 +1,54 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  display: block;
+  padding: 20px;
+  max-width: 250px;
+  border-right: 1px solid;
+  height: 100vh;
+}
+
+.folder {
+  position: relative;
+  font-size: 12px;
+}
+.folder__subfolder, .folder__file {
+  margin-left: -10px;
+  padding-left: 26px;
+  position: relative;
+  cursor: pointer;
+}
+.folder__subfolder::after, .folder__file::after {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: -8px;
+  width: 10px;
+  height: 100%;
+  border-bottom: 1px dotted;
+  border-left: 1px dotted;
+  z-index: -1;
+}
+.folder__file::before {
+  content: url(../icons/file.png);
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.folder__subfolder-name {
+  margin-left: 5px;
+}
+.folder__subfolder::before {
+  content: url(../icons/folder.png);
+  vertical-align: middle;
+}
+.folder__subfolder-nested {
+  display: none;
+}
+.folder__subfolder-nested_active {
+  display: block;
+}/*# sourceMappingURL=main.css.map */
